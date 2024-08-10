@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Buet</string>
+    <string name="departmentName">departmentName</string>
+    <string name="login_text">Please select your department</string>
+    <string name="login_button">Select</string>
+    <string name="arch_url">https://arch.buet.ac.bd</string>
+    <string name="bme_url">https://bme.buet.ac.bd</string>
+    <string name="che_url">https://che.buet.ac.bd</string>
+    <string name="ce_url">https://ce.buet.ac.bd</string>
+    <string name="cse_url">https://cse.buet.ac.bd</string>
+    <string name="eee_url">https://eee.buet.ac.bd</string>
+    <string name="ipe_url">https://ipe.buet.ac.bd</string>
+    <string name="mme_url">https://mme.buet.ac.bd</string>
+    <string name="me_url">https://me.buet.ac.bd</string>
+    <string name="nce_url">https://nce.buet.ac.bd</string>
+    <string name="name_url">https://name.buet.ac.bd</string>
+    <string name="urp_url">https://urp.buet.ac.b</string>
+    <string name="wre_url">https://wre.buet.ac.b</string>
+    <string name="arch">arch</string>
+    <string name="bme">bme</string>
+    <string name="che">che</string>
+    <string name="ce">ce</string>
+    <string name="cse">cse</string>
+    <string name="eee">eee</string>
+    <string name="ipe">ipe</string>
+    <string name="mme">mme</string>
+    <string name="me">me</string>
+    <string name="nce">nce</string>
+    <string name="name">name</string>
+    <string name="urp">urp</string>
+    <string name="wre">wre</string>
+
+</resources>
