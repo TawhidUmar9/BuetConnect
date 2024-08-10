@@ -3,10 +3,13 @@ package com.example.buet.departments;
 import java.io.Serializable;
 
 public class Department implements Serializable {
-    private final String departmentName;
-    private final int departmentImage;
-    private final int websiteURL;
-    private final int departmentAbbreviation;
+    private  String departmentName;
+    private  int departmentImage;
+    private  int websiteURL;
+    private  int departmentAbbreviation;
+
+    public Department() {
+    }
 
     public Department(String departmentName, int departmentImage, int websiteURL, int departmentAbbreviation) {
         this.departmentName = departmentName;

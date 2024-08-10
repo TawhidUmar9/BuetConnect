@@ -1,7 +1,9 @@
 package com.example.buet;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,13 +20,15 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.buet.departments.Data;
+import com.example.buet.departments.Department;
 
 public class SelectDepartmentActivity extends AppCompatActivity {
-    private Spinner spinnerDepartment;
+    private Department department;
     private ListView listViewDepartments;
     private DepartmentAdapter departmentAdapter;
     private Button selectButton;
     private TextView selectedDepartment;
+
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +50,8 @@ public class SelectDepartmentActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String dept = getString(Data.getDepartmentList().get(i).getDepartmentAbbreviation());
+                department =Data.getDepartmentList().get(i);
+                String dept = getString(department.getDepartmentAbbreviation());
                 selectedDepartment.setText("You selected: "+dept.toUpperCase());
 
             }
@@ -55,7 +60,14 @@ public class SelectDepartmentActivity extends AppCompatActivity {
         selectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SharedPreferences sharedPreferences = getSharedPreferences("user_department", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("userDepartment", department.getDepartmentName());
+                editor.putString("userDepartmentUrl", getString(department.getWebsiteURL()));
+                editor.apply();
 
+                Intent intent = new Intent(SelectDepartmentActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
