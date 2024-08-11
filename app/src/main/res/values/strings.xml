@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Buet</string>
+    <string name="app_name">BuetConnect</string>
     <string name="departmentName">departmentName</string>
     <string name="login_text">Please select your department</string>
     <string name="login_button">Select</string>
@@ -14,8 +14,8 @@
     <string name="me_url">https://me.buet.ac.bd</string>
     <string name="nce_url">https://nce.buet.ac.bd</string>
     <string name="name_url">https://name.buet.ac.bd</string>
-    <string name="urp_url">https://urp.buet.ac.b</string>
-    <string name="wre_url">https://wre.buet.ac.b</string>
+    <string name="urp_url">https://urp.buet.ac.bd</string>
+    <string name="wre_url">https://wre.buet.ac.bd</string>
     <string name="arch">arch</string>
     <string name="bme">bme</string>
     <string name="che">che</string>

@@ -8,6 +8,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -19,9 +20,8 @@ public class WebviewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_webview); // Ensure this is the correct layout file
-
-        // Handle window insets (for edge-to-edge displays)
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_webview);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -49,11 +49,25 @@ public class WebviewActivity extends AppCompatActivity {
         webSettings.setDisplayZoomControls(false);
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setUseWideViewPort(true);
+        primaryWebview.evaluateJavascript("document.body.style.zoom='150%';", null);
+        String userAgent = webSettings.getUserAgentString();
+        webSettings.setUserAgentString(userAgent + " Mobile");
+
+
         Intent intent = getIntent();
         String url = intent.getStringExtra("request_url");
         if (url == null) {
             url = "https://www.google.com";
         }
         primaryWebview.loadUrl(url);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (primaryWebview.canGoBack()) {
+            primaryWebview.goBack();
+        } else {
+            super.onBackPressed();
+        }
     }
 }
