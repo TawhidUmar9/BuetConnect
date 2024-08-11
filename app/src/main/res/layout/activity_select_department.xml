@@ -9,6 +9,7 @@
     tools:context=".SelectDepartmentActivity">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
+        style="@style/Base.Theme.Buet"
         android:layout_height="match_parent"
         app:cardCornerRadius="30dp"
         android:layout_margin="10dp"
