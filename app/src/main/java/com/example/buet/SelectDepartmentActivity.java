@@ -26,7 +26,7 @@ import com.example.buet.departments.Department;
 
 public class SelectDepartmentActivity extends AppCompatActivity {
     int count = 2;
-    private Department department;
+    private Department department = null;
     private ListView listViewDepartments;
     private DepartmentAdapter departmentAdapter;
     private Button selectButton;
@@ -70,6 +70,10 @@ public class SelectDepartmentActivity extends AppCompatActivity {
             public void onClick(View view) {
                 SharedPreferences sharedPreferences = getSharedPreferences("user_department", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
+                if(department == null){
+                    Toast.makeText(SelectDepartmentActivity.this, "Please select your department", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 editor.putString("userDepartment", department.getDepartmentName());
                 editor.putString("userDepartmentUrl", getString(department.getWebsiteURL()));
                 editor.apply();
