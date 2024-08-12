@@ -29,5 +29,6 @@
     <string name="name">name</string>
     <string name="urp">urp</string>
     <string name="wre">wre</string>
+    <string name="main_activity_text">What do you want to do?</string>
 
 </resources>
