@@ -1,11 +1,9 @@
 package com.example.buet.departments;
 
 import com.example.buet.R;
-
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import javax.xml.transform.Source;
 
 public class Data {
     private static List<Department> departmentList;

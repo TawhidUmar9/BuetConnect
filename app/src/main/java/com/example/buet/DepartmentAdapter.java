@@ -1,6 +1,5 @@
 package com.example.buet;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,15 +7,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.buet.departments.Department;
-
 import java.util.List;
 
 public class DepartmentAdapter extends BaseAdapter {
     private final Context context;
     private final List<Department> departmentList;
-    private LayoutInflater layoutInflater;
 
     public DepartmentAdapter(Context context, List<Department> departmentList) {
         this.context = context;
@@ -41,7 +37,7 @@ public class DepartmentAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if(convertView == null){
-            layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.item_departments, parent,false);
         }
         ImageView imageView = convertView.findViewById(R.id.departmentImage);

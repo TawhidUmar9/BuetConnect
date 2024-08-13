@@ -4,23 +4,18 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.media.audiofx.HapticGenerator;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
 import com.example.buet.departments.Data;
 import com.example.buet.departments.Department;
 
@@ -48,9 +43,9 @@ public class SelectDepartmentActivity extends AppCompatActivity {
         if (sharedPreferences.contains("userDepartment")) {
             callMainActivity();
         }
-        selectedDepartment = (TextView) findViewById(R.id.selected_department);
-        selectButton = (Button) findViewById(R.id.select_department_button);
-        listViewDepartments = (ListView) findViewById(R.id.departmentListView);
+        selectedDepartment = findViewById(R.id.selected_department);
+        selectButton = findViewById(R.id.select_department_button);
+        listViewDepartments = findViewById(R.id.departmentListView);
         departmentAdapter = new DepartmentAdapter(SelectDepartmentActivity.this, Data.getDepartmentList());
         listViewDepartments.setAdapter(departmentAdapter);
 

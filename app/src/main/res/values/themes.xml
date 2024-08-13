@@ -3,6 +3,11 @@
     <style name="Base.Theme.Buet" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="cardBackgroundColor">#C9A9BB</item>
+        <item name="android:solidColor">@android:color/black</item>
     </style>
     <style name="Theme.Buet" parent="Base.Theme.Buet" />
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
 </resources>

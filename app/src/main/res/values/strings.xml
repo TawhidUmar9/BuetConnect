@@ -30,5 +30,17 @@
     <string name="urp">urp</string>
     <string name="wre">wre</string>
     <string name="main_activity_text">What do you want to do?</string>
+    <string name="about_app_button">About the app</string>
+    <string name="change_department_button">Change your department</string>
+    <string name="about_1">About</string>
+    <string name="buetconnect">BuetConnect</string>
+    <string name="about_2">This is an open source project and can be found on</string>
+    <string name="about_3">If you liked my work show some ❤️ and ⭐ the repo</string>
+    <string name="about_4">For any questions or suggestions, please feel free to email at</string>
+    <string name="email">tawhidumar.21@protonmail.com</string>
+    <string name="about4">Made with ❤️ by Tawhid Umar</string>
+    <string name="logo">logo</string>
+    <string name="settings_icon">settings_icon</string>
+    <string name="setting_panel_help">Please Choose</string>
 
 </resources>

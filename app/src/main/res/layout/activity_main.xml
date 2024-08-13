@@ -17,6 +17,7 @@
         app:cardCornerRadius="30dp"
         android:layout_margin="10dp">
         <ImageButton
+            android:contentDescription="@string/settings_icon"
             android:id="@+id/settings_button"
             android:scaleType="fitCenter"
             android:layout_gravity="end"
@@ -44,6 +45,7 @@
             <Button
                 android:id="@+id/department_website_button"
                 android:layout_width="match_parent"
+                android:fontFamily="@font/roboto_flex"
                 android:background="@drawable/round_button"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"/>
@@ -51,6 +53,7 @@
             <Button
                 android:id="@+id/biis_webiste_button"
                 android:layout_width="match_parent"
+                android:fontFamily="@font/roboto_flex"
                 android:background="@drawable/round_button"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp" />
@@ -58,6 +61,7 @@
                 android:id="@+id/rise_website_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_flex"
                 android:background="@drawable/round_button"
                 android:layout_margin="10dp"/>
         </LinearLayout>
